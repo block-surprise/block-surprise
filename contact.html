@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>お問い合わせ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fdfdfd;
+      color: #444;
+    }
+
+    /* ナビゲーションバー */
+    nav {
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+      transition: opacity 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.6;
+    }
+
+    /* メインコンテンツ */
+    main {
+      padding: 3em 2em;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1em;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 640px;
+      height: 480px;
+      max-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ナビゲーションバー -->
+  <nav>
+    <div class="logo">Block Surprise</div>
+    <ul>
+      <li><a href="/">ホーム</a></li>
+      <li><a href="/about.html">このサイトについて</a></li>
+      <li><a href="/log.html">更新履歴</a></li>
+      <li><a href="/contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <!-- メイン -->
+  <main>
+    <h1>お問い合わせ</h1>
+    <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__Wi1hrFURERJQjVRV1NNUlI3MTNQWDVJMUpaSFQzSi4u&embed=true"
+      frameborder="0"
+      marginwidth="0"
+      marginheight="0"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      msallowfullscreen>
+    </iframe>
+  </main>
+
+</body>
+</html>
