@@ -18,6 +18,33 @@
 
   gtag('config', 'G-WND1FJBJNH');
 </script>
+<script>
+  const maxSends = 5;
+  let sentCount = 0;
+
+  function sendEvent() {
+    if (sentCount >= maxSends) return;
+
+    gtag('event', 'custom_view', {
+      event_category: 'block_surprise',
+      event_label: '公式サイト訪問',
+      value: 1
+    });
+
+    sentCount++;
+  }
+
+  // 初回送信
+  sendEvent();
+
+  // 1分ごとに送信（あと4回）
+  const interval = setInterval(() => {
+    sendEvent();
+    if (sentCount >= maxSends) {
+      clearInterval(interval);
+    }
+  }, 60000);
+</script>
 
   <style>
     body {
@@ -535,6 +562,7 @@ const visited = getCookie("visited");
 
 </body>
 </html>
+
 
 
 
