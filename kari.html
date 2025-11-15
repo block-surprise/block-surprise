@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>しずかな検索</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
+    .centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .logo {
+      font-size: 32px;
+      margin-bottom: 24px;
+      color: #2f6feb;
+      text-decoration: none;
+    }
+    input[type="search"] {
+      width: 100%;
+      max-width: 480px;
+      padding: 14px 18px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 24px;
+      outline: none;
+    }
+    #results {
+      max-width: 720px;
+      margin: 32px auto 0;
+      padding: 0 16px;
+    }
+    .result {
+      padding: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    .result h2 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+    .result p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="centered">
+    <h1 class="logo">しずかな検索</h1>
+    <input id="searchInput" type="search" placeholder="検索…" autofocus />
+    <div id="results"></div>
+  </div>
+
+  <script>
+    const DATA = [
+      { title: "静謐とは", description: "静かで落ち着いた様子を表す言葉。" },
+      { title: "余白の美学", description: "デザインにおける空間の使い方について。" },
+      { title: "世界観の作り方", description: "ブランドや作品に一貫性を持たせる方法。" },
+      { title: "詩的なUIとは", description: "感情に寄り添うインターフェースの考察。" }
+    ];
+
+    function search(query) {
+      const q = (query || "").toLowerCase();
+      return DATA.filter(item =>
+        item.title.toLowerCase().includes(q) || item.description.toLowerCase().includes(q)
+      );
+    }
+
+    function render(results) {
+      const container = document.getElementById("results");
+      container.innerHTML = "";
+      results.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "result";
+        div.innerHTML = `<h2>${item.title}</h2><p>${item.description}</p>`;
+        container.appendChild(div);
+      });
+    }
+
+    document.getElementById("searchInput").addEventListener("input", e => {
+      const results = search(e.target.value);
+      render(results);
+    });
+  </script>
+</body>
+</html>
