@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ワード検索</title>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WND1FJBJNH"></script>
 <script>
@@ -12,7 +13,6 @@
 
   gtag('config', 'G-WND1FJBJNH');
 </script>
-  <title>ワード検索</title>
   <style>
     body {
       margin: 0;
@@ -43,61 +43,24 @@
       border-radius: 24px;
       outline: none;
     }
-    #results {
-      max-width: 720px;
-      margin: 32px auto 0;
-      padding: 0 16px;
-    }
-    .result {
-      padding: 16px;
-      border-bottom: 1px solid #eee;
-    }
-    .result h2 {
-      margin: 0 0 6px;
-      font-size: 18px;
-    }
-    .result p {
-      margin: 0;
-      color: #555;
-    }
   </style>
 </head>
 <body>
   <div class="centered">
     <h1 class="logo">ワード検索</h1>
-    <input id="searchInput" type="search" placeholder="検索…" autofocus />
-    <div id="results"></div>
+    <form id="searchForm">
+      <input id="searchInput" type="search" placeholder="検索…" autofocus />
+    </form>
   </div>
 
   <script>
-    const DATA = [
-      { title: "静謐とは", description: "静かで落ち着いた様子を表す言葉。" },
-      { title: "余白の美学", description: "デザインにおける空間の使い方について。" },
-      { title: "世界観の作り方", description: "ブランドや作品に一貫性を持たせる方法。" },
-      { title: "詩的なUIとは", description: "感情に寄り添うインターフェースの考察。" }
-    ];
-
-    function search(query) {
-      const q = (query || "").toLowerCase();
-      return DATA.filter(item =>
-        item.title.toLowerCase().includes(q) || item.description.toLowerCase().includes(q)
-      );
-    }
-
-    function render(results) {
-      const container = document.getElementById("results");
-      container.innerHTML = "";
-      results.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "result";
-        div.innerHTML = `<h2>${item.title}</h2><p>${item.description}</p>`;
-        container.appendChild(div);
-      });
-    }
-
-    document.getElementById("searchInput").addEventListener("input", e => {
-      const results = search(e.target.value);
-      render(results);
+    document.getElementById("searchForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const q = document.getElementById("searchInput").value.trim();
+      if (q) {
+        const googleURL = "https://www.google.com/search?q=" + encodeURIComponent(q);
+        window.location.href = googleURL;
+      }
     });
   </script>
 </body>
