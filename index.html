@@ -558,23 +558,7 @@ renderNews();
 
 
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".nav-menu");
 
-    toggle.addEventListener("click", () => {
-      const isOpen = menu.classList.contains("open");
-      if (isOpen) {
-        menu.classList.remove("open");
-        toggle.classList.remove("open");
-      } else {
-        menu.classList.add("open");
-        toggle.classList.add("open");
-      }
-    });
-  });
-</script>
 <script>
   document.cookie = "visited=true; max-age=86400; path=/";
 function getCookie(name) {
@@ -592,6 +576,7 @@ const visited = getCookie("visited");
 
 </body>
 </html>
+
 
 
 
