@@ -1,0 +1,7 @@
+# ブロックサプライズ公式サイト robots.txt
+# 検索エンジンに全ページのクロールを許可し、サイトマップの場所を案内します。
+
+User-agent: *
+Allow: /
+
+Sitemap: https://crafters.blocksurprise.f5.si/sitemap.xml
