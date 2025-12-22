@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crafters.blocksurprise.f5.si/sitemap.xml
+Sitemap: https://blocksurprise.f5.si/sitemap.xml
