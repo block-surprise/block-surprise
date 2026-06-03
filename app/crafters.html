@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>記事 | ブロックサプライズ</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Noto Sans JP",sans-serif;
+background:#f4f7fb;
+color:#222;
+padding-bottom:90px;
+}
+
+.page-header{
+padding:30px 20px 15px;
+}
+
+.page-header h1{
+font-size:2rem;
+font-weight:800;
+}
+
+.page-header p{
+margin-top:5px;
+color:#777;
+}
+
+.search-area{
+padding:0 20px 20px;
+}
+
+.search-input{
+width:100%;
+padding:15px 18px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:15px;
+
+background:white;
+
+box-shadow:
+0 4px 12px rgba(0,0,0,.08);
+
+outline:none;
+}
+
+.featured{
+margin:0 20px 25px;
+
+background:white;
+
+border-radius:28px;
+
+overflow:hidden;
+
+text-decoration:none;
+
+color:inherit;
+
+display:block;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.08);
+}
+
+.featured img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.featured-content{
+padding:20px;
+}
+
+.featured-badge{
+display:inline-block;
+
+padding:6px 12px;
+
+border-radius:999px;
+
+background:#007AFF;
+
+color:white;
+
+font-size:.8rem;
+font-weight:700;
+}
+
+.featured-title{
+font-size:1.35rem;
+font-weight:700;
+
+margin-top:12px;
+
+line-height:1.5;
+}
+
+.featured-desc{
+margin-top:10px;
+color:#666;
+line-height:1.7;
+}
+
+.section{
+padding:0 20px;
+margin-bottom:35px;
+}
+
+.section-title{
+font-size:1.2rem;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.article-card{
+
+display:flex;
+gap:14px;
+
+background:white;
+
+padding:12px;
+
+border-radius:20px;
+
+text-decoration:none;
+color:inherit;
+
+margin-bottom:14px;
+
+box-shadow:
+0 3px 10px rgba(0,0,0,.06);
+}
+
+.article-card img{
+width:120px;
+height:90px;
+
+object-fit:cover;
+
+border-radius:14px;
+}
+
+.article-content{
+flex:1;
+}
+
+.article-title{
+font-size:.95rem;
+font-weight:700;
+line-height:1.5;
+}
+
+.article-meta{
+font-size:.75rem;
+color:#888;
+margin-top:8px;
+}
+
+.bottom-nav{
+position:fixed;
+
+left:0;
+right:0;
+bottom:0;
+
+background:white;
+
+display:flex;
+justify-content:space-around;
+
+padding:12px 0;
+
+box-shadow:
+0 -4px 15px rgba(0,0,0,.08);
+
+z-index:999;
+}
+
+.nav-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+
+text-decoration:none;
+
+font-size:.75rem;
+
+color:#777;
+}
+
+.nav-icon{
+font-size:1.2rem;
+margin-bottom:4px;
+}
+
+.nav-active{
+color:#007AFF;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page-header">
+<h1>記事</h1>
+<p>クラフターズノート</p>
+</div>
+
+<div class="search-area">
+<input
+class="search-input"
+id="searchInput"
+type="search"
+placeholder="記事を検索..."
+>
+</div>
+
+<a href="005.html" class="featured">
+
+<img src="/p/005.png">
+
+<div class="featured-content">
+
+<div class="featured-badge">
+おすすめ
+</div>
+
+<div class="featured-title">
+マイクラ統合版エンダードラゴン討伐までの最短ルートを解説！
+</div>
+
+<div class="featured-desc">
+ネザー進出からエンド到達まで最短で攻略する方法を徹底解説。
+</div>
+
+</div>
+
+</a>
+<section class="section">
+
+<h2 class="section-title">
+⚔️ サバイバル・攻略
+</h2>
+
+<a href="deepslate-aesthetics" class="article-card">
+
+<img src="deepslate-boundary.png">
+
+<div class="article-content">
+
+<div class="article-title">
+深層岩の底で──静寂と、冷たいダイヤモンドの夢
+</div>
+
+<div class="article-meta">
+2026年2月15日 ・ 地下探索
+</div>
+
+</div>
+
+</a>
+
+<a href="cactus-disappear" class="article-card">
+
+<img src="sabo.png">
+
+<div class="article-content">
+
+<div class="article-title">
+サボテンに触れるとアイテムが消える
+</div>
+
+<div class="article-meta">
+2025年12月2日 ・ アイテム
+</div>
+
+</div>
+
+</a>
+
+<a href="name-tag-magic" class="article-card">
+
+<img src="name-magic.png">
+
+<div class="article-content">
+
+<div class="article-title">
+名前の魔法
+</div>
+
+<div class="article-meta">
+2025年12月1日 ・ 小ネタ
+</div>
+
+</div>
+
+</a>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+🕵️ Hive・マーダーミステリー
+</h2>
+
+<a href="hive-murder" class="article-card">
+
+<img src="mm.png">
+
+<div class="article-content">
+
+<div class="article-title">
+Hiveマーダーミステリーの心理戦
+</div>
+
+<div class="article-meta">
+2025年11月29日 ・ Hive
+</div>
+
+</div>
+
+</a>
+
+<a href="murder-almost-legend" class="article-card">
+
+<img src="m-m.png">
+
+<div class="article-content">
+
+<div class="article-title">
+あと一歩で無双だった夜
+</div>
+
+<div class="article-meta">
+2025年11月30日 ・ マーダー
+</div>
+
+</div>
+
+</a>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+⭐ 人気記事
+</h2>
+
+<a href="005.html" class="article-card">
+
+<img src="/p/005.png">
+
+<div class="article-content">
+
+<div class="article-title">
+エンダードラゴン討伐までの最短ルート
+</div>
+
+<div class="article-meta">
+人気記事
+</div>
+
+</div>
+
+</a>
+
+<a href="004.html" class="article-card">
+
+<img src="/p/004.png">
+
+<div class="article-content">
+
+<div class="article-title">
+マイクラ サバイバルの始め方
+</div>
+
+<div class="article-meta">
+人気記事
+</div>
+
+</div>
+
+</a>
+
+<a href="hive-murder" class="article-card">
+
+<img src="mm.png">
+
+<div class="article-content">
+
+<div class="article-title">
+Hiveマーダーミステリーの心理戦
+</div>
+
+<div class="article-meta">
+人気記事
+</div>
+
+</div>
+
+</a>
+
+</section>
+<nav class="bottom-nav">
+
+<a href="index.html" class="nav-item">
+<i class="fa-solid fa-house nav-icon"></i>
+<span>ホーム</span>
+</a>
+
+<a href="promo.html" class="nav-item">
+<i class="fa-solid fa-table-cells-large nav-icon"></i>
+<span>サイト</span>
+</a>
+
+<a href="crafters.html" class="nav-item nav-active">
+<i class="fa-regular fa-newspaper nav-icon"></i>
+<span>記事</span>
+</a>
+
+<a href="#" class="nav-item">
+<i class="fa-solid fa-gear nav-icon"></i>
+<span>設定</span>
+</a>
+
+</nav>
+
+<script>
+
+const searchInput =
+document.getElementById("searchInput");
+
+const articles =
+document.querySelectorAll(".article-card");
+
+searchInput.addEventListener(
+"input",
+function(){
+
+const keyword =
+this.value.toLowerCase();
+
+articles.forEach(article=>{
+
+const text =
+article.textContent.toLowerCase();
+
+if(text.includes(keyword)){
+
+article.style.display="flex";
+
+}else{
+
+article.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+
