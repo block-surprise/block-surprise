@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サイト一覧 | ブロックサプライズ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+body{
+margin:0;
+font-family:"Noto Sans JP",sans-serif;
+background:#f4f7fb;
+padding-bottom:100px;
+}
+.header{
+padding:30px 20px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+.header h1{
+margin:0;
+font-size:1.8rem;
+}
+.header p{
+margin-top:5px;
+color:#666;
+}
+.search{
+padding:20px;
+}
+.search input{
+width:100%;
+padding:14px 18px;
+border:none;
+border-radius:18px;
+font-size:15px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.stats{
+padding:0 20px 15px;
+font-size:.9rem;
+color:#666;
+}
+.site-list{
+padding:0 20px;
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+.site-card{
+display:flex;
+align-items:center;
+gap:15px;
+background:white;
+padding:18px;
+border-radius:20px;
+text-decoration:none;
+color:#111;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.site-icon{
+width:54px;
+height:54px;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+background:#eef5ff;
+color:#007AFF;
+}
+.site-info{
+flex:1;
+}
+.site-title{
+font-weight:700;
+margin-bottom:4px;
+}
+.site-desc{
+font-size:.85rem;
+color:#666;
+}
+.arrow{
+color:#aaa;
+}
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:white;
+display:flex;
+justify-content:space-around;
+padding:12px 0;
+box-shadow:0 -4px 15px rgba(0,0,0,.08);
+}
+.nav-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-decoration:none;
+font-size:.75rem;
+color:#777;
+}
+.nav-active{
+color:#007AFF;
+}
+.nav-icon{
+font-size:1.3rem;
+margin-bottom:4px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>サイト一覧</h1>
+<p>ブロックサプライズ運営サイト</p>
+</div>
+<div class="search">
+<input
+type="search"
+id="searchInput"
+placeholder="サイトを検索..."
+>
+</div>
+<div class="stats">
+11サイト
+</div>
+<div class="site-list" id="siteList">
+  <a href="https://blocksurprise.f5.si/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+ブロックサプライズ公式サイト
+</div>
+<div class="site-desc">
+YouTubeチャンネル公式サイト
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://crafters.blocksurprise.f5.si/" class="site-card">
+<div class="site-icon">
+<i class="fa-regular fa-newspaper"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+クラフターズノート
+</div>
+<div class="site-desc">
+Minecraftの記事サイト
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://games.ad-hub.f5.si/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-gamepad"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+ミニゲームセンター
+</div>
+<div class="site-desc">
+30種類以上のゲーム
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://kuraberukun.f5.si/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-chart-column"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+くらべる君
+</div>
+<div class="site-desc">
+数字で比較する便利ツール
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://tsukaerupay.blocksurprise.f5.si/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-credit-card"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+つかえるPay
+</div>
+<div class="site-desc">
+使える決済方法を検索
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://www.surge.f5.si/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-magnifying-glass"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+SURGE検索
+</div>
+<div class="site-desc">
+高速検索エンジン
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://www.surge.f5.si/utsudake/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-keyboard"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+打つだけ。
+</div>
+<div class="site-desc">
+無料タイピングサイト
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://blockun.hateblo.jp/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-book"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+blockunのブログ
+</div>
+<div class="site-desc">
+Minecraft攻略ブログ
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://blockun.blog.jp/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-pen"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+blockunのblog
+</div>
+<div class="site-desc">
+技術・AIブログ
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://block-pocket.hateblo.jp/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-bolt"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+block-pocketのblog
+</div>
+<div class="site-desc">
+ポケモン攻略ブログ
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+<a href="https://nandemo-block.hateblo.jp/" class="site-card">
+<div class="site-icon">
+<i class="fa-solid fa-layer-group"></i>
+</div>
+<div class="site-info">
+<div class="site-title">
+nandemo-blockのブログ
+</div>
+<div class="site-desc">
+雑記ブログ
+</div>
+</div>
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</a>
+</div>
+<nav class="bottom-nav">
+<a href="index.html" class="nav-item">
+<i class="fa-solid fa-house nav-icon"></i>
+ホーム
+</a>
+<a href="promo.html" class="nav-item nav-active">
+<i class="fa-solid fa-table-cells-large nav-icon"></i>
+サイト
+</a>
+<a href="crafters.html" class="nav-item">
+<i class="fa-regular fa-newspaper nav-icon"></i>
+記事
+</a>
+<a href="#" class="nav-item">
+<i class="fa-solid fa-gear nav-icon"></i>
+設定
+</a>
+</nav>
+<script>
+const searchInput =
+document.getElementById("searchInput");
+const cards =
+document.querySelectorAll(".site-card");
+searchInput.addEventListener(
+"input",
+function(){
+const keyword =
+this.value.toLowerCase();
+cards.forEach(card=>{
+const text =
+card.textContent.toLowerCase();
+card.style.display =
+text.includes(keyword)
+? "flex"
+: "none";
+});
+});
+</script>
+</body>
+</html>
