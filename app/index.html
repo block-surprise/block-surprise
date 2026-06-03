@@ -3,53 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BlockSurprise App</title>
+<title>ブロックサプライズ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-body{
-    margin:0;
-    font-family:sans-serif;
-    background:#f5f5f5;
+:root{
+    --primary:#007AFF;
+    --bg:#F5F7FB;
+    --card:#FFFFFF;
+    --text:#111827;
+    --sub:#6B7280;
 }
-header{
-    background:#007aff;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:"Noto Sans JP",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    padding-bottom:90px;
+}
+.header{
+    background:linear-gradient(135deg,#007AFF,#38B6FF);
     color:white;
-    padding:20px;
-    text-align:center;
+    padding:40px 24px;
+    border-radius:0 0 28px 28px;
+}
+.logo{
+    width:72px;
+    height:72px;
+    background:white;
+    color:#007AFF;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    margin-bottom:16px;
+}
+.title{
+    font-size:2rem;
+    font-weight:700;
+}
+.subtitle{
+    opacity:.9;
+    margin-top:8px;
 }
 .container{
-    max-width:1000px;
-    margin:auto;
     padding:20px;
 }
 .section{
-    margin-bottom:40px;
+    margin-top:28px;
 }
-.section h2{
-    margin-bottom:15px;
+.section-title{
+    font-size:1.3rem;
+    margin-bottom:14px;
 }
-.card-grid{
+.quick-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
-.card{
+.quick-card{
+    background:var(--card);
+    padding:18px;
+    border-radius:18px;
+    text-decoration:none;
+    color:inherit;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.quick-icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+.quick-name{
+    font-weight:700;
+}
+.quick-desc{
+    font-size:.85rem;
+    color:var(--sub);
+}
+.article{
+    display:flex;
+    gap:14px;
     background:white;
-    padding:15px;
-    border-radius:10px;
+    border-radius:18px;
+    overflow:hidden;
     text-decoration:none;
-    color:black;
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
-    transition:.2s;
+    color:inherit;
+    margin-bottom:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
-.card:hover{
-    transform:translateY(-3px);
+.article img{
+    width:120px;
+    height:100px;
+    object-fit:cover;
 }
-.more{
-    display:inline-block;
-    margin-top:15px;
-    color:#007aff;
-    text-decoration:none;
-    font-weight:bold;
+.article-content{
+    padding:12px;
+    flex:1;
+}
+.article-title{
+    font-weight:700;
+    margin-bottom:8px;
+}
+.article-desc{
+    font-size:.85rem;
+    color:var(--sub);
 }
 .bottom-nav{
     position:fixed;
@@ -59,65 +121,92 @@ header{
     background:white;
     display:flex;
     justify-content:space-around;
-    padding:12px;
-    box-shadow:0 -2px 8px rgba(0,0,0,.1);
+    padding:12px 0;
+    box-shadow:0 -3px 12px rgba(0,0,0,.08);
 }
 .bottom-nav a{
     text-decoration:none;
-    color:#333;
+    color:#555;
+    font-size:.9rem;
 }
 </style>
 </head>
 <body>
-<header>
-    <h1>BlockSurprise</h1>
-</header>
+<div class="header">
+    <div class="logo">🧱</div>
+    <div class="title">ブロックサプライズ</div>
+    <div class="subtitle">
+        運営サイトや最新記事をまとめてチェック
+    </div>
+</div>
 <div class="container">
 <section class="section">
-    <h2>🌐 運営サイト</h2>
-<div class="card-grid">
-    <a class="card" href="https://blocksurprise.f5.si/">
-        <h3>ブロックサプライズ公式サイト</h3>
-        <p>公式サイト</p>
-    </a>
-    <a class="card" href="https://crafters.blocksurprise.f5.si">
-        <h3>クラフターズノート</h3>
-        <p>Minecraft記事サイト</p>
-    </a>
-    <a class="card" href="https://games.ad-hub.f5.si">
-        <h3>ミニゲームセンター</h3>
-        <p>30種類以上のゲーム</p>
-    </a>
-    <a class="card" href="https://kuraberukun.f5.si">
-        <h3>くらべる君</h3>
-        <p>比較ツール</p>
-    </a>
+<h2 class="section-title">おすすめサイト</h2>
+<div class="quick-grid">
+<a href="https://blocksurprise.f5.si/" class="quick-card">
+<div class="quick-icon">🌐</div>
+<div class="quick-name">公式サイト</div>
+<div class="quick-desc">ブロックサプライズ公式</div>
+</a>
+<a href="https://crafters.blocksurprise.f5.si/" class="quick-card">
+<div class="quick-icon">📰</div>
+<div class="quick-name">クラフターズ</div>
+<div class="quick-desc">Minecraft記事サイト</div>
+</a>
+<a href="https://games.ad-hub.f5.si/" class="quick-card">
+<div class="quick-icon">🎮</div>
+<div class="quick-name">ゲームセンター</div>
+<div class="quick-desc">30種類以上のゲーム</div>
+</a>
+<a href="https://www.surge.f5.si/" class="quick-card">
+<div class="quick-icon">🔍</div>
+<div class="quick-name">SURGE検索</div>
+<div class="quick-desc">検索エンジン</div>
+</a>
 </div>
-<a class="more" href="promo.html">もっと見る →</a>
 </section>
 <section class="section">
-    <h2>📰 クラフターズ最新記事</h2>
-<div class="card-grid">
-    <div class="card">
-        <h3>エンダードラゴン討伐までの最短ルート</h3>
-    </div>
-    <div class="card">
-        <h3>マイクラ サバイバルの始め方</h3>
-    </div>
-    <div class="card">
-        <h3>サクラ材で創る和風モダン建築</h3>
-    </div>
-    <div class="card">
-        <h3>アイアンゴーレム倒し方講座</h3>
-    </div>
+<h2 class="section-title">最新記事</h2>
+<a href="#" class="article">
+<img src="p/005.png">
+<div class="article-content">
+<div class="article-title">
+エンダードラゴン討伐までの最短ルート
 </div>
-<a class="more" href="crafters.html">もっと見る →</a>
+<div class="article-desc">
+ネザー進出からエンド攻略までを解説
+</div>
+</div>
+</a>
+<a href="#" class="article">
+<img src="p/004.png">
+<div class="article-content">
+<div class="article-title">
+マイクラ サバイバルの始め方
+</div>
+<div class="article-desc">
+1日目から効率よく進める方法
+</div>
+</div>
+</a>
+<a href="#" class="article">
+<img src="cherry.jpg">
+<div class="article-content">
+<div class="article-title">
+和風モダン建築の極意
+</div>
+<div class="article-desc">
+サクラ材を使った建築テクニック
+</div>
+</div>
+</a>
 </section>
 </div>
 <nav class="bottom-nav">
-    <a href="index.html">🏠 ホーム</a>
-    <a href="promo.html">🌐 サイト</a>
-    <a href="crafters.html">📰 記事</a>
+<a href="#">🏠<br>ホーム</a>
+<a href="promo.html">🌐<br>サイト</a>
+<a href="crafters.html">📰<br>記事</a>
+<a href="#">⚙️<br>設定</a>
 </nav>
 </body>
 </html>
